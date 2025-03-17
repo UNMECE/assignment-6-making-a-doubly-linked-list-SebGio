@@ -73,7 +73,8 @@ int list_length(Coordinate *list_beginning)
 }
 void closest_to(Coordinate *list_beginning, float x, float y)
 {
-	float minDistance = FLT_MAX;
+	//highest possible value is 999.9
+	float minDistance = 1000;
 	Coordinate* closeCoordinate = list_beginning;
 	while(list_beginning != NULL)
 	{

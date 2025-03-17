@@ -5,6 +5,7 @@
 
 int main(int argc, char* argv[])
 {
+
 	//make sure number of coordinates is specified
 	if (argc == 1)
 	{
@@ -27,7 +28,7 @@ int main(int argc, char* argv[])
 	//fill the list
 	for (int i = 0; i < numCoords; ++i)
 	{
-		add_coordinate(tail, (float)rand() / 10, (float)rand() / 10);
+		add_coordinate(tail, (float)(rand()%10000) / 10, (float)(rand()%10000) / 10);
 		tail = tail->next;
 	}
 
@@ -50,7 +51,7 @@ int main(int argc, char* argv[])
 	backward_display(tail);
 	
 
-	closest_to(head, (float)rand() / 10, (float)rand() / 10);
+	closest_to(head, (float)(rand()%10000) / 10, (float)(rand()%10000) / 10);
 
 	//clear memory
 	while (head != NULL)
